@@ -37,7 +37,7 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v5
         with:
-          go-version: 1.21.x
+          go-version: 1.24.x
           cache-dependency-path: "**/*.sum"
       #    - name: Setup kubectl
       #      uses: azure/setup-kubectl@v3.2
@@ -97,8 +97,6 @@ You can select a run-job release version with the `version` parameter:
 To build and install `run-job` from source using `go install`, specify `version: tip`.
 
 ```yaml
-steps:
-...
 - uses: StevenACoffman/setup-run-job@v0.0.4
 - name: 'Run a Job in Kubernetes'
   run: |
