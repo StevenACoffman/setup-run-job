@@ -8,6 +8,10 @@ inputs:
     description: 'Version of run-job to install (tip, latest-release, v0.1, etc.)'
     required: true
     default: 'latest-release'
+  github_token:
+    description: 'GitHub Access Token'
+    required: false
+    default: ${{ github.token }}
 runs:
   using: "composite"
   steps:
